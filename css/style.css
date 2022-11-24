@@ -15,7 +15,7 @@
     --clr-paragraph: hsla(204, 43%, 93%, 0.5);
     --clr-paragraph-header: hsl(218, 22%, 67%);
     --clr-background-main: hsl(218, 22%, 67%);
-    --clr-background-header: hsl(204, 43%, 93%);
+    --clr-background-header: #fff;
     --clr-background-signup: hsl(179, 62%, 43%);
     --clr-background-why-us: hsl(179, 100%, 43%);
 
@@ -52,4 +52,177 @@ body {
 
     /* background */
     background-color: var(--clr-background-main);
+}
+
+/* display */
+.grid {
+    display: grid;
+}
+
+ul {
+    list-style: none;
+}
+
+main {
+    width: 375px;
+    height: auto;
+}
+
+.marketing.container {
+    width: 328px;
+    margin-inline: auto;
+    padding-block: 5rem;
+    border-radius: 0.5rem;
+    -webkit-border-radius: 0.5rem;
+    -moz-border-radius: 0.5rem;
+    -ms-border-radius: 0.5rem;
+    -o-border-radius: 0.5rem;
+}
+
+.header {
+    background-color: var(--clr-background-header);
+    padding: 2rem;
+    box-shadow: 0px 0px 20px hsla(0, 0%, 0%, 0.15);
+    border-radius: 0.5rem 0.5rem 0 0;
+    -webkit-border-radius: 0.5rem 0.5rem 0 0;
+    -moz-border-radius: 0.5rem 0.5rem 0 0;
+    -ms-border-radius: 0.5rem 0.5rem 0 0;
+    -o-border-radius: 0.5rem 0.5rem 0 0;
+}
+
+.header .title {
+    font-size: 22px;
+    font-weight: var(--fw-bold);
+    color: var(--clr-heading);
+    padding-bottom: 1rem;
+}
+
+.header .subtitle {
+    font-weight: var(--fw-bold);
+    color: var(--clr-accent-subtitle);
+    padding-bottom: 1rem;
+}
+
+.header .paragraph {
+    color: var(--clr-paragraph-header);
+}
+
+.signup {
+    background-color: var(--clr-background-signup);
+    padding: 2rem;
+    box-shadow: 0px 0px 20px hsla(0, 0%, 0%, 0.15);
+}
+
+.signup .title {
+    font-size: 20px;
+    font-weight: var(--fw-bold);
+    color: #fff;
+}
+
+.signup .price {
+    font-size: 2rem;
+    font-weight: var(--fw-bold);
+    color: #fff;
+}
+
+.signup .price span {
+    font-size: 1rem;
+    font-weight: var(--fw-regular);
+    color: hsla(0, 0%, 100%, 0.5);
+}
+
+.signup .caption {
+    color: #fff;
+    padding-bottom: 1rem;
+}
+
+.signup .btn {
+    display: block;
+    width: 100%;
+    background-color: var(--clr-accent-cta);
+    padding: 1rem;
+    color: #fff;
+    text-decoration: none;
+    text-align: center;
+    font-weight: var(--fw-bold);
+    border-radius: 0.5rem;
+    -webkit-border-radius: 0.5rem;
+    -moz-border-radius: 0.5rem;
+    -ms-border-radius: 0.5rem;
+    -o-border-radius: 0.5rem;
+    box-shadow: 0px 0px 20px hsla(0, 0%, 0%, 0.15);
+}
+
+.whyus {
+    background-color: var(--clr-background-why-us);
+    padding: 2rem;
+    box-shadow: 0px 0px 20px hsla(0, 0%, 0%, 0.15);
+    border-radius: 0 0 0.5rem 0.5rem;
+    -webkit-border-radius: 0 0 0.5rem 0.5rem;
+    -moz-border-radius: 0 0 0.5rem 0.5rem;
+    -ms-border-radius: 0 0 0.5rem 0.5rem;
+    -o-border-radius: 0 0 0.5rem 0.5rem;
+}
+
+.whyus .title {
+    font-size: 20px;
+    font-weight: var(--fw-bold);
+    color: hsla(0, 0%, 100%, 0.9);
+    padding-bottom: 1rem;
+}
+
+.whyus .list {
+    color: hsla(0, 0%, 100%, 0.85);
+}
+
+/* desktop */
+
+@media screen and (min-width: 600px) {
+    main {
+        width: 1100px;
+    }
+
+    .marketing.container {
+        width: 700px;
+        padding: 0;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas:
+            "header header"
+            "signup whyus";
+        box-shadow: 0px 0px 30px hsla(0, 0%, 0%, 0.2);
+    }
+
+    .header {
+        grid-area: header;
+        box-shadow: none;
+        border-radius: 0.5rem 0.5rem 0 0;
+        -webkit-border-radius: 0.5rem 0.5rem 0 0;
+        -moz-border-radius: 0.5rem 0.5rem 0 0;
+        -ms-border-radius: 0.5rem 0.5rem 0 0;
+        -o-border-radius: 0.5rem 0.5rem 0 0;
+    }
+
+    .header .paragraph {
+        padding-right: 8rem;
+    }
+
+    .signup {
+        grid-area: signup;
+        box-shadow: none;
+    }
+    .signup .btn {
+        margin-top: 2rem;
+        width: 100%;
+    }
+
+    .whyus {
+        grid-area: whyus;
+        box-shadow: none;
+        border-radius: 0 0 0.5rem 0;
+        -webkit-border-radius: 0 0 0.5rem 0;
+        -moz-border-radius: 0 0 0.5rem 0;
+        -ms-border-radius: 0 0 0.5rem 0;
+        -o-border-radius: 0 0 0.5rem 0;
+    }
 }
