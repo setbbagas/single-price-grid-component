@@ -1,0 +1,55 @@
+/* google font */
+@import url("https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap");
+
+/* variables */
+:root {
+    /* font family */
+    --ff-base: "Karla", sans-serif;
+    /* font weight */
+
+    --fw-regular: 400;
+    --fw-bold: 700;
+    /* color */
+    --clr-heading: hsl(179, 62%, 43%);
+    --clr-paragraph: hsl(204, 43%, 93%);
+    --clr-paragraph: hsla(204, 43%, 93%, 0.5);
+    --clr-paragraph-header: hsl(218, 22%, 67%);
+    --clr-background-main: hsl(218, 22%, 67%);
+    --clr-background-header: hsl(204, 43%, 93%);
+    --clr-background-signup: hsl(179, 62%, 43%);
+    --clr-background-why-us: hsl(179, 100%, 43%);
+
+    --clr-accent-cta: hsl(71, 73%, 54%);
+    --clr-accent-subtitle: hsl(71, 73%, 54%);
+}
+
+/* reset */
+/* box-model */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+/* remove default margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* general styling */
+body {
+    /* layout */
+    min-height: 100vh;
+    width: 100%;
+    /* display */
+    display: grid;
+    place-content: center;
+    /* font */
+    font-family: var(--ff-base);
+    font-size: 1rem;
+    line-height: 1.5;
+    font-weight: var(--fw-regular);
+
+    /* background */
+    background-color: var(--clr-background-main);
+}
